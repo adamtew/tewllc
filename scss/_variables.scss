@@ -1,7 +1,50 @@
 $colors: (
-  main: #FFF,
+  main-1: #000, // Headers
+  main-2: #FFF, // Headers
+  accent-1: #F4F4F4, // background
+  accent-2: #999999, // background
+  accent-3: #D0D2D3, // background
+  white: #FFF, // background
+);
+
+$configs: ( // the margins around the content
+  full: 100px,
+  tablet-lg: 60px,
+  tablet: 40px,
+  phone-lg: 15px,
+  phone: 0,
+  small: 36px,
+  menu-width: 250px
+);
+
+$breakpoints: (
+  phone: 400px,
+  phone-lg: 649px,
+  tablet: 767px,
+  tablet-lg: 991px,
+  desktop: 1300px
 );
 
 @function color($key) {
-  @return map-get($colors, $key);
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+  @warn "Unknown #{$key} in colors map";
+  @return null;
+}
+
+@function config($key) {
+  @if map-has-key($configs, $key) {
+    @return map-get($configs, $key);
+  }
+  @warn "unknown #{$key} in configs map";
+  @return null;
+}
+
+@function breakpoint($key) {
+  @if map-has-key($breakpoints, $key) {
+    @return map-get($breakpoints, $key);
+  }
+  @warn "Unknown #{$key} in breakpoints map";
+  @return null;
 }

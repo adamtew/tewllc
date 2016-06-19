@@ -1,0 +1,8 @@
+.top-bar {
+  position: fixed;
+  background: color(accent-1);
+  height: 50px;
+  width: 100%;
+  padding: 10px config(full);
+  z-index: 1;
+}
