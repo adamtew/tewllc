@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic);
+
 $colors: (
   main-1: #000, // Headers
   main-2: #FFF, // Headers
@@ -6,6 +8,23 @@ $colors: (
   accent-3: #D0D2D3, // background
   white: #FFF, // background
 );
+
+/*
+  Maybe
+#44B3F0
+#6E91A3
+#F22F3B
+#BDBB60
+#A3A278
+
+
+  Maybe Again
+  #69F0AE // base green
+  EAD9F2 // purple-gray
+  BDA26C // brownish
+  F07969 // redish
+*/
+
 
 $configs: ( // the margins around the content
   full: 100px,

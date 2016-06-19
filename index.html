@@ -4,23 +4,31 @@
   <meta charset="UTF-8">
   <title>Tew</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js" type="text/javascript"></script>
 </head>
 <body>
+
   <div class="top-bar">
     <div class="logo">TEW<span class="opacity-5">CODE</span></div>
   </div>
+
   <header class="banner">
       <big class="main-2">TEW<span class="opacity-5">CODE</span></big>
   </header>
-  <section>
-    <h1>Who We Are</h1>
+
+  <section id="js-banner" >
+    <h1>Who We Are </h1>
+    <h4><span class="js-who-we-are"></span></h4>
   </section>
 
   <section>
     <h1>What We Do</h1>
 
-    <div class="column">
+    <div class="column column--tall">
       <div class="card">
+        <div class="push--tall"></div>
         <div class="card__logo">&lt;/&gt;</div>
         HTML
         Transforming wireframes, mockups into HTML and CSS.
@@ -35,14 +43,16 @@
         <p></p>
       </div>
     </div>
-    <div class="column">
+    <div class="column column--tall">
       <div class="card">
+        <div class="push--tall"></div>
         <div class="card__logo">&lt;/&gt;</div>
         Backend
       </div>
     </div>
-    <div class="column">
+    <div class="column column--tall">
       <div class="card">
+        <div class="push--tall"></div>
         <div class="card__logo">&lt;/&gt;</div>
         <h3>Stuff</h3>
       </div>
@@ -105,7 +115,6 @@
       <div class="card">
         <div class="card__header">
           <img src="img/freshcode.svg" alt="">
-          <h3>Fresh Code</h3>
         </div>
         <div class="card__content">
           Fresh Code is 
@@ -161,6 +170,33 @@
   </section>
 
   <!-- Contact Us -->
+<script>
+    $(function(){
+        $(".js-who-we-are").typed({
+            strings: [
+              'Coders. ^1000',
+              ],
+            typeSpeed: 2,
+            cursorChar: '_',
+            callback: function() {
+              $('.typed-cursor').addClass('typed-cursor-blink')
+            }
+        });
+    });
+
+    var waypoint = new Waypoint({
+      element: document.getElementById('js-banner'),
+      handler: function(direction) {
+        if (direction === 'down') {
+          $('.logo').addClass('logo-active')
+        } else {
+          $('.logo').removeClass('logo-active')
+        }
+
+        console.log('Scrolled to waypoint!')
+      }
+    })
+</script>
 
 </body>
 </html>

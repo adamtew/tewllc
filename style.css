@@ -1,3 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic);
+/*
+  Maybe
+#44B3F0
+#6E91A3
+#F22F3B
+#BDBB60
+#A3A278
+
+
+  Maybe Again
+  #69F0AE // base green
+  EAD9F2 // purple-gray
+  BDA26C // brownish
+  F07969 // redish
+*/
 .main-1 {
   color: #000; }
 
@@ -10,6 +26,12 @@
 .opacity-5 {
   opacity: .5; }
 
+.push {
+  height: 25px; }
+
+.push--tall {
+  height: 50px; }
+
 .column {
   float: left;
   width: 32%; }
@@ -18,6 +40,8 @@
       width: 100%; } }
   .column:nth-child(n) {
     margin-right: 1%; }
+  .column--tall {
+    margin: 50px 0 0 0; }
 
 .banner {
   position: relative;
@@ -35,6 +59,7 @@
   height: 50px;
   width: 100%;
   padding: 10px 100px;
+  border-bottom: 1px solid #999999;
   z-index: 1; }
 
 .card {
@@ -55,7 +80,7 @@
     width: 100px;
     height: 100px;
     padding: 25px;
-    box-shadow: 0px 0px 5px #D0D2D3;
+    box-shadow: 1px 5px 27px -5px black;
     border-radius: 50%;
     border: 1px solid #999999;
     -webkit-transform: translateX(-50%);
@@ -79,7 +104,7 @@ body {
   top: 50px;
   background-color: #F4F4F4;
   height: 200vh;
-  font-family: helvetica;
+  font-family: 'Playfair Display', serif;
   -webkit-font-smoothing: antialiased; }
 
 big {
@@ -131,3 +156,39 @@ p {
   float: left;
   font-size: 20px;
   z-index: 2; }
+
+.logo {
+  position: relative;
+  float: left;
+  font-size: 20px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+  z-index: 2; }
+  .logo-active {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+
+.typed-cursor-blink {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
