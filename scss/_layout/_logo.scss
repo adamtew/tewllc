@@ -3,7 +3,7 @@
   float: left;
   font-size: 20px;
   transform: scale(0);
-  transition: transform .3s ease;
+  transition: transform .3s cubic-bezier(0, 1.2, 1, 1.2);
   z-index: 2;
 
   &-active {

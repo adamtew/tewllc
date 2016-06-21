@@ -18,7 +18,7 @@
       <big class="main-2">TEW<span class="opacity-5">CODE</span></big>
   </header>
 
-  <section id="js-banner" >
+  <section id="js-banner">
     <h1>Who We Are </h1>
     <h4><span class="js-who-we-are"></span></h4>
   </section>
@@ -171,18 +171,18 @@
 
   <!-- Contact Us -->
 <script>
-    $(function(){
-        $(".js-who-we-are").typed({
-            strings: [
-              'Coders. ^1000',
-              ],
-            typeSpeed: 2,
-            cursorChar: '_',
-            callback: function() {
-              $('.typed-cursor').addClass('typed-cursor-blink')
-            }
-        });
-    });
+    // $(function(){
+    //     $(".js-who-we-are").typed({
+    //         strings: [
+    //           'Coders. ^1000',
+    //           ],
+    //         typeSpeed: 2,
+    //         cursorChar: '_',
+    //         callback: function() {
+    //           $('.typed-cursor').addClass('typed-cursor-blink')
+    //         }
+    //     });
+    // });
 
     var waypoint = new Waypoint({
       element: document.getElementById('js-banner'),
@@ -193,7 +193,22 @@
           $('.logo').removeClass('logo-active')
         }
 
-        console.log('Scrolled to waypoint!')
+        $(function(){
+        $(".js-who-we-are").typed({
+            strings: [
+              'Coders. ^1000',
+              'Coders. ^1000',
+              'Coders. ^1000',
+              'Coders. ^1000',
+              'Coders. ^1000',
+              ],
+            typeSpeed: 2,
+            cursorChar: '_',
+            callback: function() {
+              $('.typed-cursor').addClass('typed-cursor-blink')
+            }
+        });
+    });
       }
     })
 </script>
